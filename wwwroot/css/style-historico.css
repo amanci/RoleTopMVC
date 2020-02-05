@@ -1,0 +1,51 @@
+* {
+    margin:  5px auto;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(41, 41, 41);
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+h3{
+    font-size: 25px;;
+}
+
+#table-history{
+    display: flex;
+    align-content: space-around;
+}
+
+table {
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+caption{
+    background-color: rgb(41, 41, 41);
+    padding: 15px;
+    color: #ffffff;
+}
+th{
+    padding: 20px; 
+    background-color: rgb(41, 41, 41);
+}
+
+td{
+    padding: 20px;
+}
+
+
+@media (max-width: 600px) {
+    h2 {
+        width: 115%;
+    }
+}

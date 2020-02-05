@@ -1,0 +1,103 @@
+﻿@model RoleTopMVC.ViewModels.BaseViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS PAG. HOME -->
+    @if(@Model.NomeView.Equals("Home")){
+        <link rel="stylesheet" type="text/css" href="~/css/style-index.css">
+        <link rel="stylesheet" type="text/css" href="~/css/style-gallery.css">
+        <link rel="stylesheet" type="text/css" href="~/css/style-next-events.css">
+    }
+
+    <!-- CSS MENU NAV -->
+    <link rel="stylesheet" type="text/css" href="~/css/style-nav.css">
+
+    <!-- CSS PAG LOGIN -->
+    @if(@Model.NomeView.Equals("Login")){
+    <link rel="stylesheet" type="text/css" href="~/css/style-signin.css">
+    }
+
+    <!-- CSS PAG CADASTRO DE EVENTO -->
+    @if(@Model.NomeView.Equals("Agendamento")){
+    <link rel="stylesheet" type="text/css" href="~/css/style-form-events.css">
+    }
+
+    <!-- CSS PAG CADASTRO -->
+    @if(@Model.NomeView.Equals("Cadastro")){
+    <link rel="stylesheet" type="text/css" href="~/css/style-signup.css">
+    }
+
+    <!-- CSS PAG HISTÓRICO -->
+    @if(@Model.NomeView.Equals("Historico")){
+    <link rel="stylesheet" type="text/css" href="~/css/style-historico.css">
+    }
+
+    <!-- CSS PAG DASHBOARD USUÁRIO -->
+    @if(@Model.NomeView.Equals("DashboardUsuario")){
+    <link rel="stylesheet" type="text/css" href="~/css/style-dashboard-user.css">
+    }
+
+    <!-- CSS PAG DASHBOARD ADMINISTRADOR -->
+    @if(@Model.NomeView.Equals("DashboardAdministrador")){
+    <link rel="stylesheet" type="text/css" href="~/css/style-dashboard-adm.css">
+    }
+
+    <title>ROLE TOP | HOME</title>
+
+    <!-- SCRIPT MENU NAV-->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script> type="text/javascript">
+        $(document).ready(function()
+        {
+            $('.toggle span').click(function()
+            {
+                $('ul').toggleClass('active')
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="toggle">
+                <span>MENU</span>
+            </div>
+            <ul>
+                <li><a href='@Url.Action("Index", "Home")' class="active">PRINCIPAL</a></li>
+                <li><a href='@Url.Action("Index", "Home")#section-3'>PRÓXIMOS EVENTOS</a></li>
+                <li><a href='@Url.Action("Index", "Home")#section-4'>GALERIA</a></li>
+                <li><a href='@Url.Action("Index", "Home")#section-5'>ORÇAMENTO</a></li>
+                <li><a href='@Url.Action("Index", "Home")#section-6'>LOCALIZAÇÃO</a></li>
+                @if(string.IsNullOrEmpty(@Model.UsuarioEmail)) {
+                    <li><a asp-controller="Login" asp-action="Index">LOGIN | CADASTRO</a></li> 
+                
+                } else {
+                    <li><a asp-controller="Login" asp-action="Logoff">LOGOFF</a></li>
+                }
+
+                @if(@Model.NomeView.Equals("DashboardAdministrador")){
+                    <li><a asp-controller="DashboardAdministrador" asp-action="Index">DASHBOARD</a></li>
+                }
+
+                @if(@Model.NomeView.Equals("DashboardUsuario")){
+                    <li><a asp-controller="DashboardUsuario" asp-action="Index">DASHBOARD</a></li>
+                }
+    
+            </ul>
+            <div style="clear: both">       </div>
+        </nav>
+    </header>
+
+    <div class="container">
+    <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+
+        </main>
+    </div>
+</body>
+</html>

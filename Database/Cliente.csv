@@ -1,0 +1,2 @@
+tipo_usuario=0;nome=user1;cpf_cnpj=000.000.000-00;telefone=(00) 0 0000-0000;endereco=RUA A;email=user1@gmail.com;senha=12345678;
+tipo_usuario=1;nome=admin;cpf_cnpj=478.958.808-45;telefone=11 9 7295-0446;endereco=Rua Benedetto Antelami;email=admin@gmail.com;senha=adminadmin;

@@ -1,0 +1,29 @@
+@model RoleTopMVC.ViewModels.HistoricoViewModel
+
+<main>
+    <div id="table-history">
+        <table>
+            <caption>
+                <h3>HISTÓRICO DE EVENTOS</h3> 
+            </caption>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME EVENTO</th>
+                    <th>DATA EVENTO</th>
+                    <th>DESCRIÇÃO</th> 
+                </tr>
+            </thead>
+            <tbody> 
+                @foreach (var agendamento in @Model.Agendamentos){
+                    <tr>
+                        <td>@agendamento.Id</td>
+                        <td>@agendamento.Evento.NomeEvento</td>
+                        <td>@agendamento.DataAgendamento</td>
+                        <td>@agendamento.Evento.DescricaoEvento</td>
+                    </tr>
+                }
+            </tbody> 
+        </table>
+    </div>
+</main>

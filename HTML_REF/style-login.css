@@ -1,0 +1,66 @@
+* {
+    margin:  5px 0;
+    padding: 0;
+}
+
+/* 
+Roxo: #7d0093
+Amarelo: #ffc600
+*/
+
+body{
+    background-color: #ffc600;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    font-family: 'Fredoka', cursive;
+}
+
+#signup{
+    text-align: center;
+}
+
+#signup a{
+    color: #a31800;
+    
+}
+
+form * {
+    margin: 5px;
+    overflow: hidden;
+}
+
+form input, form select {
+    width: 25%;
+    height: 25px;
+    border: none;
+    text-align: center;
+    padding: 3.5px 2px;
+}  
+
+form label {
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+}
+
+form input[type="submit"] {
+    background-color: #ce1800;
+    color: #ffffff;
+    margin: 20px 0;
+    height: 3em;
+    width: 6%;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form input[type="submit"]:hover {
+    background-color: #a31800;
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: bolder;
+}

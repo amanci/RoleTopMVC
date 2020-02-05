@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style-form-events.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>ROLE TOP | FORM EVENTOS</title>
+
+</head>
+
+<body>
+
+    <h2>CADASTRE SEU EVENTO !</h2>
+    <br>
+    <br>
+    
+    <div id="signup">
+        <form method="POST" action="index.html">
+            <div>
+                <label for="name-event">NOME DO EVENTO</label>
+                <br>
+                <br>
+                <input id="name-event" type="text" maxlength="20" minlength="3" name="name-event" />
+            </div>
+
+            <div>
+                <br>
+                <label for="type-event-form">TIPO DO EVENTO</label>
+                <br>
+                <br>
+                <input id="type-event-form" type="text" />
+            </div>
+            
+            <div>
+                <br>
+                <label for="date-event">DATA</label>
+                <br>
+                <br>
+                <input id="date-event" type="date" />
+            </div>
+
+            <div>
+                <br>
+                <label for="begin-event">INÍCIO ÀS:</label>
+                <br>
+                <br>
+                <input id="begin-event" type="time" />
+            </div>
+            
+            <div>
+                <br>
+                <label for="end-event">TERMINO ÀS:</label>
+                <br>
+                <br>
+                <input id="end-event" type="time" />
+            </div>
+            <input type="submit" value="CADASTRAR EVENTO" /> 
+        </form>
+    </div>
+</body>
+</html>

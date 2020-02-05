@@ -1,0 +1,60 @@
+* {
+    margin: 5px 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(41, 41, 41);
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+#signin {
+    text-align: center;
+}
+
+#signin a {
+    color: #e4ce0a;
+}
+
+form * {
+    margin: 5px;
+    overflow: hidden;
+}
+
+form input,
+form select {
+    width: 25%;
+    height: 25px;
+    border: none;
+    text-align: center;
+    padding: 3.5px 2px;
+}
+
+form label {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+}
+
+form input[type="submit"] {
+    background-color: #ffea00;
+    color: #000000;
+    margin: 20px 0;
+    height: 3em;
+    width: 65px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form input[type="submit"]:hover {
+    background-color: rgb(41, 41, 41);
+    color: #ffea00;
+    cursor: pointer;
+    font-weight: bolder;
+}

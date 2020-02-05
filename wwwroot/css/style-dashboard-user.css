@@ -1,0 +1,53 @@
+* {
+    margin:  auto 0;
+    padding: 0;
+}
+
+body{
+    background-color: #262626;
+}
+
+h2{
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: #262626;
+    background-color: #ffea00;
+    padding: 6px;
+}
+
+a:hover {
+    color: #ffea00;
+    background-color: #262626;
+    
+
+}
+
+#dashboard-user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-start space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 600px;
+}
+
+#dashboard-user img{
+    padding: 8%;
+}
+
+#schedule-events #history-events{
+    height: 225px;
+    width: 225px;
+    background-color: rgb(0, 0, 0);
+} 
+
+#dashboard-user p{
+    color: #ffffff;
+    padding: 15px;
+}
